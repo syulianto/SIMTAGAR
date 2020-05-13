@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    fab:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:orientation="vertical"
+        android:id="@+id/nav_host_fragment">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/peta_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="TextView1" />
+
+            <TextView
+                android:id="@+id/peta_jab"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="+62899887766554" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MapsActivity" />
+
+            <ImageButton
+                android:id="@+id/map_myloc"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:src="@drawable/myloc" />
+
+            <ImageButton
+                android:id="@+id/map_searchloc"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:src="@drawable/search_loc" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/white_greyish">
+
+                <TableLayout
+                    android:id="@+id/peta_tbl_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:id="@+id/peta_tr_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/peta_pilih_jenis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Pilih Jenis Peta" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/peta_tr_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/peta_peta1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Peta Jalan"
+                                android:buttonTint="@color/hijaudefault"/>
+
+                            <RadioButton
+                                android:id="@+id/peta_peta2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Peta Satelit"
+                                android:buttonTint="@color/hijaudefault"/>
+
+                            <RadioButton
+                                android:id="@+id/peta_peta4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Peta Hibrid"
+                                android:buttonTint="@color/hijaudefault"/>
+
+                            <RadioButton
+                                android:id="@+id/peta_peta3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Peta Terrain"
+                                android:buttonTint="@color/hijaudefault"/>
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_add"
+                fab:menu_openDirection="down"
+                fab:menu_colorNormal="@color/hijaudefault"
+                android:backgroundTint="@color/hijaudefault"
+                fab:menu_colorPressed="@color/hijaudefault"
+                fab:menu_labels_position="left">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_aktifitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aktifitas"
+                    fab:fab_label="Aktifitas Penting"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_kejadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/kejadian"
+                    fab:fab_label="Kejadian"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_patok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/patok"
+                    fab:fab_label="Patok pembatas"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_jalan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jalan"
+                    fab:fab_label="Kondisi jalan"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_jembatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jembatan"
+                    fab:fab_label="Kondisi jembatan"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_tanaman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tanaman"
+                    fab:fab_label="Tanaman"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_saluran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/saluran"
+                    fab:fab_label="Kondisi Saluran"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/peta_fab_geotag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/foto"
+                    fab:fab_label="Geotag"
+                    fab:fab_size="mini"
+                    fab:fab_colorNormal="@color/hijaudefault"
+                    fab:fab_colorPressed="@color/hijaudefault"
+                    fab:menu_labels_position="right" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </FrameLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="-50dp">
+
+            <TextView
+                android:id="@+id/peta_segmen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/peta_koord"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="Lok: 106.904, -6.166" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,712 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Informasi Sistem"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="fill_parent"
+            android:id="@+id/textView1" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:background="#00923F" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:background="#00923F" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/info_proses"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/skyblue"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:text="Tutup" />
+
+                <Button
+                    android:id="@+id/info_hapus"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FF0000"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:text="Hapus Data" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tbl_layout_apps"
+        android:layout_below="@id/header" >
+
+        <TableRow
+            android:id="@+id/tableRow1a"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versi Aplikasi    " />
+
+            <TextView
+                android:id="@+id/info_versi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0.0" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1b"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versi Operating System  " />
+
+            <TextView
+                android:id="@+id/info_versios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0.0" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versi SDK   " />
+
+            <TextView
+                android:id="@+id/info_sdk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2a"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device   " />
+
+            <TextView
+                android:id="@+id/info_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2b"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Model   " />
+
+            <TextView
+                android:id="@+id/info_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2c"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info Produk   " />
+
+            <TextView
+                android:id="@+id/info_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tbl_layout_apps">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tbl_layout1"
+            android:layout_below="@id/tbl_layout" >
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01. Record Absensi   " />
+
+                <TextView
+                    android:id="@+id/info_dbabsensi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02. Record Aktifitas   " />
+
+                <TextView
+                    android:id="@+id/info_dbaktifitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03. Record Geotag   " />
+
+                <TextView
+                    android:id="@+id/info_dbgeotag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04. Record Kondisi Jalan   " />
+
+                <TextView
+                    android:id="@+id/info_dbjalan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05. Record Kondisi Jembatan   " />
+
+                <TextView
+                    android:id="@+id/info_dbjembatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="06. Record Kejadian Penting   " />
+
+                <TextView
+                    android:id="@+id/info_dbkejadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="07. Record Peta   " />
+
+                <TextView
+                    android:id="@+id/info_dbpeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow10"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08. Record Patok   " />
+
+                <TextView
+                    android:id="@+id/info_dbpatok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow11"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09. Record Pekerja   " />
+
+                <TextView
+                    android:id="@+id/info_dbpekerja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10. Record Afdeling   " />
+
+                <TextView
+                    android:id="@+id/info_dbafdeling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow13"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11. Record Referensi Aktifitas   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefaktifitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow14"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12. Record Referensi Jabatan   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefjab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow15"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13. Record Referensi Jenis Jalan   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefjalan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow16"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14. Record Referensi Kondisi Jalan   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefjalankondisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow17"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15. Record Referensi Jenis Jembatan   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefjembatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow18"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16. Record Referensi Kondisi Jembatan   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefjembatankondisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow19"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17. Record Referensi Kebun   " />
+
+                <TextView
+                    android:id="@+id/info_dbkebun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow20"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18. Record Referensi Kejadian   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefkejadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow21"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19. Record Referensi Komoditi   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefkomoditi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow22"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20. Record Referensi Jenis Patok   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefpatok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow23"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21. Record Referensi Pekerjaan     " />
+
+                <TextView
+                    android:id="@+id/info_dbrefpekerjaan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow24"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22. Record Referensi Jenis Saluran   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefsaluran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow25"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23. Record Referensi Kondisi Saluran   " />
+
+                <TextView
+                    android:id="@+id/info_dbrefsalurankondisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow26"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24. Record Saluran   " />
+
+                <TextView
+                    android:id="@+id/info_dbsaluran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow27"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25. Record Komoditi   " />
+
+                <TextView
+                    android:id="@+id/info_dbkomoditi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

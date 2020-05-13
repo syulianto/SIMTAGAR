@@ -1,0 +1,368 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Pengaturan"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="fill_parent"
+            android:id="@+id/textView1" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:background="#00923F" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:background="#00923F" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow14"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/setting_proses"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/skyblue"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:text="Proses" />
+
+                <Button
+                    android:id="@+id/setting_batal"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FF0000"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:text="Batal" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/header">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:stretchColumns="1"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat  " />
+
+                <EditText
+                    android:layout_span="2"
+                    android:id="@+id/setting_webip"
+                    android:layout_width="fill_parent"
+                    android:textCursorDrawable="@drawable/warna_edit_text"
+                    android:backgroundTint="@color/hijaudefault"
+                    android:layout_height="wrap_content" >
+
+                    <requestFocus />
+                </EditText>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Direktori  " />
+
+                <EditText
+                    android:id="@+id/setting_vd"
+                    android:layout_span="2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textCursorDrawable="@drawable/warna_edit_text"
+                    android:backgroundTint="@color/hijaudefault"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tampilkan" />
+
+                <CheckBox
+                    android:id="@+id/setting_kejadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kejadian" />
+
+                <CheckBox
+                    android:id="@+id/setting_patok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patok Pembatas" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  " />
+
+                <CheckBox
+                    android:id="@+id/setting_aktifitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aktifitas Penting" />
+
+                <CheckBox
+                    android:id="@+id/setting_jalan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_rekam_jalan" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  " />
+
+                <CheckBox
+                    android:id="@+id/setting_jembatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_rekam_jembatan" />
+
+                <CheckBox
+                    android:id="@+id/setting_tanaman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_rekam_tanaman" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  " />
+
+                <CheckBox
+                    android:id="@+id/setting_saluran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_rekam_saluran" />
+
+                <CheckBox
+                    android:id="@+id/setting_geotag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foto Geotag" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Peta  " />
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/setting_peta1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peta Jalan" />
+                    <RadioButton
+                        android:id="@+id/setting_peta2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peta Satelit" />
+                    <RadioButton
+                        android:id="@+id/setting_peta4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peta Hibrid" />
+                    <RadioButton
+                        android:id="@+id/setting_peta3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peta Terrain" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow9a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView9a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Koordinat  " />
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/setting_koord1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GPS (Derajat Desimal)" />
+                    <RadioButton
+                        android:id="@+id/setting_koord2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GPS (Derajat Menit Desimal) " />
+                    <RadioButton
+                        android:id="@+id/setting_koord3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GPS (Derajat Menit Detik)" />
+                    <RadioButton
+                        android:id="@+id/setting_koord4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UTM" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kontrol" />
+
+                <CheckBox
+                    android:id="@+id/setting_pz"
+                    android:layout_span="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preserve Zoom Level" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  " />
+
+                <CheckBox
+                    android:id="@+id/setting_pl"
+                    android:layout_span="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preserve Koordinat Saya" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,217 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Pengunduhan Data"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="fill_parent"
+            android:id="@+id/textView1" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/hijaudefault" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/hijaudefault" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1b"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/download_proses"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/skyblue"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:text="Proses" />
+
+                <Button
+                    android:id="@+id/download_batal"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#FF0000"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Tutup" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/header">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1e"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data" />
+
+                <CheckBox
+                    android:id="@+id/download_kejadian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Kejadian" />
+
+                <CheckBox
+                    android:id="@+id/download_Aktifitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Aktifitas" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow1f"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <CheckBox
+                    android:id="@+id/download_patok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Patok Pembatas" />
+
+                <CheckBox
+                    android:id="@+id/download_jalan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Kondisi Jalan" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow1g"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <CheckBox
+                    android:id="@+id/download_jembatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Kondisi Jembatan" />
+
+                <CheckBox
+                    android:id="@+id/download_saluran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Kondisi Saluran" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow1h"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <CheckBox
+                    android:id="@+id/download_tanaman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Komoditi" />
+
+                <CheckBox
+                    android:id="@+id/download_pekerja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/hijaudefault"
+                    android:text="Pekerja" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

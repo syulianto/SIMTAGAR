@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content" >
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_no_ket"
+            android:layout_width="wrap_content"
+            android:text="No. Urut  "
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_no"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_jenis_ket"
+            android:layout_width="wrap_content"
+            android:text="Jenis"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_jenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_nama_ket"
+            android:layout_width="wrap_content"
+            android:text="Nama  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_koord_ket"
+            android:layout_width="wrap_content"
+            android:text="Titik Amat  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_koord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_ket_ket"
+            android:layout_width="wrap_content"
+            android:text="Keterangan  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_ket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_dari_server_ket"
+            android:layout_width="wrap_content"
+            android:text="Data Server  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_dari_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_patok_kirim_ket"
+            android:layout_width="wrap_content"
+            android:text="Status Kirim  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_patok_kirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+</TableLayout>

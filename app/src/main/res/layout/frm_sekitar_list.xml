@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TableRow>
+        <ImageView
+            android:id="@+id/sekitarl_img"
+            android:layout_gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TableRow>
+                <TextView
+                    android:id="@+id/sekitarl_jenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/sekitarl_ket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/sekitarl_koord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/sekitarl_jarak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+    </TableRow>
+</TableLayout>

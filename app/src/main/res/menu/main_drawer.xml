@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+
+    </group>
+    <group android:checkableBehavior="single">
+        <!--        <item-->
+        <!--            android:id="@+id/nav_home"-->
+        <!--            android:icon="@drawable/ic_android_black_24dp"-->
+        <!--            android:title="@string/menu_home" />-->
+        <item
+            android:id="@+id/menu_pindah"
+            android:title="@string/menu_pindah" />
+        <item
+            android:id="@+id/menu_absensi"
+            android:title="@string/menu_absensi" />
+        <item
+            android:id="@+id/menu_kml"
+            android:title="@string/menu_kml" />
+        <item
+            android:id="@+id/toggle_kml"
+            android:title="@string/toggle_kml" />
+        <item
+            android:id="@+id/menu_sekitar"
+            android:title="@string/menu_sekitar" />
+        <item
+            android:id="@+id/menu_lihatdata"
+            android:title="@string/menu_lihat_data" />
+        <item
+            android:id="@+id/menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/menu_download"
+            android:title="@string/menu_download" />
+        <item
+            android:id="@+id/menu_upload"
+            android:title="@string/menu_upload" />
+    </group>
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/menu_setting"
+                android:title="@string/menu_setting" />
+            <item
+                android:id="@+id/menu_logout"
+                android:title="@string/menu_logout" />
+            <item
+                android:id="@+id/menu_info"
+                android:title="@string/menu_info" />
+            <item
+                android:id="@+id/menu_keluar"
+                android:title="@string/menu_keluar" />
+        </menu>
+
+
+    </item>
+</menu>

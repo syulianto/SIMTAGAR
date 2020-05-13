@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">SIMTAGAR</string>
+    <string name="title_activity_maps">SIMTAGAR</string>
+    <string name="title_activity_login">SIMTAGAR</string>
+    <string name="prompt_email">Nama Pengguna</string>
+    <string name="prompt_password">Kata Sandi</string>
+    <string name="action_sign_in">Log-in</string>
+    <string name="action_sign_in_short">Log-in</string>
+    <string name="welcome">"Selamat Datang"</string>
+    <string name="invalid_username">Nama pengguna tidak valid</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Log-in gagal"</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_keluar">Keluar</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_rekam">Perekaman</string>
+    <string name="menu_pindah">Pindah Kebun</string>
+    <string name="menu_rekam_jalan">Perekaman Jalan</string>
+    <string name="menu_rekam_jembatan">Perekaman Jembatan</string>
+    <string name="menu_rekam_saluran">Perekaman Saluran</string>
+    <string name="menu_rekam_obyek">Perekaman Obyek</string>
+    <string name="menu_rekam_tanaman">Perekaman Tanaman</string>
+    <string name="menu_instruksi">Respond Instruksi</string>
+    <string name="menu_geotag">Perekaman Foto</string>
+    <string name="menu_downup">Download Data</string>
+    <string name="menu_upload">Unggah Data</string>
+    <string name="menu_download">Unduh Data</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_lihat_data">Lihat Data</string>
+    <string name="menu_induk">Daftar Data</string>
+    <string name="menu_kml">Unduh Peta</string>
+    <string name="toggle_kml">Tampilan Peta</string>
+    <string name="menu_absensi">Absensi Pegawai</string>
+    <string name="menu_info">Info Sistem</string>
+    <string name="menu_daftar_aktif">Daftar Aktifitas</string>
+    <string name="menu_daftar_ins">Daftar Instruksi</string>
+    <string name="menu_sekitar">Obyek Sekitar</string>
+    <string name="title_activity_form__pilih_peta">form_PilihPeta</string>
+    <string name="title_activity_frm_login">frm_login</string>
+    <string name="title_activity_frm_setting">frm_setting</string>
+    <string name="preview_description"></string>
+    <string name="btn_take_picture">Rekam Foto</string>
+    <string name="btn_record_video">Rekam Video</string>
+    <string name="empty">---</string>
+    <string name="title_activity_menuactivity">menuactivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+</resources>

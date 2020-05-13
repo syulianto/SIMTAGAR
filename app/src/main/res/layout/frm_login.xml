@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_google_signin_btn_tint" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+        <!--  Header  Starts-->
+        <LinearLayout android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip">
+            <!-- Logo Start-->
+            <ImageView android:src="@drawable/logo_simtagar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="120dip"
+                />
+            <!-- Logo Ends -->
+        </LinearLayout>
+        <!--  Header Ends -->
+        <!-- Footer Start -->
+        <!-- Footer Ends -->
+
+        <!-- Login Form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:layout_below="@id/header">
+            <!--  Email Label -->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="ID Pegawai"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+            <EditText android:layout_width="fill_parent"
+                android:id="@+id/login_user"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:textCursorDrawable="@drawable/warna_edit_text"
+                android:backgroundTint="@color/hijaudefault"
+                android:layout_marginBottom="20dip"
+                android:singleLine="true"/>
+            <!--  Password Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Kata Sandi"/>
+            <EditText android:layout_width="fill_parent"
+                android:id="@+id/login_pwd"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/warna_edit_text"
+                android:backgroundTint="@color/hijaudefault"
+                android:inputType="textPassword"
+                />
+            <!-- Login button -->
+            <Button android:id="@+id/login_proses"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="#00923F"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="Login"/>
+            <!-- Link to Registration Screen -->
+
+        </LinearLayout>
+        </LinearLayout>
+        <!-- Login Form Ends -->
+    </RelativeLayout>
+</ScrollView>

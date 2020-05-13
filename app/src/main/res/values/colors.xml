@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="app_primary">#D81B60</color>
+    <color name="app_primary_pressed">#A8B9A9</color>
+    <color name="app_ripple">#8BC34A</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray">#c6c6c6</color>
+    <color name="skyblue">#0D64D3</color>
+    <color name="background_color">#009688</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="hijaudefault">#00923F</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content" >
+    <TableRow
+        android:layout_marginBottom="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_8">
+        <TextView
+            android:id="@+id/ld_aktifitas_no_ket"
+            android:layout_width="wrap_content"
+            android:text="No. Urut  "
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_no"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_jenis_ket"
+            android:layout_width="wrap_content"
+            android:text="Jenis"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_jenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_ebiaya_ket"
+            android:layout_width="wrap_content"
+            android:text="Est. Keb. Biaya (Rp)  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_ebiaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_elama_ket"
+            android:layout_width="wrap_content"
+            android:text="Est. Lama (Hari)  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_elama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_esdm_ket"
+            android:layout_width="wrap_content"
+            android:text="Est. Keb. SDM (Org)  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_esdm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_ket_ket"
+            android:layout_width="wrap_content"
+            android:text="Keterangan  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_ket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_koord_ket"
+            android:layout_width="wrap_content"
+            android:text="Titik Amat"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_koord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_dari_server_ket"
+            android:layout_width="wrap_content"
+            android:text="Data Server  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_dari_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/ld_aktifitas_kirim_ket"
+            android:layout_width="wrap_content"
+            android:text="Status Kirim  "
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ld_aktifitas_kirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+</TableLayout>
