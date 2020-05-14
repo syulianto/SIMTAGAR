@@ -358,6 +358,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -419,6 +423,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(14)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -660,6 +668,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -711,6 +723,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(12)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -765,6 +781,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setUrut(Integer.parseInt(cursor.getString(0)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -903,6 +923,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -948,6 +972,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(13)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1001,6 +1029,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setUrut(Integer.parseInt(cursor.getString(0)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1139,6 +1171,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -1184,6 +1220,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(13)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1236,6 +1276,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setUrut(Integer.parseInt(cursor.getString(0)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1292,6 +1336,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(11)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1481,6 +1529,49 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
+        return aset;
+    }
+
+    public List<DB_KML> DBKML_GetKebun(int idkebun) {
+        List<DB_KML> aset = new LinkedList<DB_KML>();
+        ArrayList<String>  mStringList= new ArrayList<String>();
+        String crit = "";
+        if( !crit.equals("") ) { crit = crit + " and idkebun = ? "; } else { crit = "idkebun = ? "; }
+        mStringList.add(String.valueOf(idkebun));
+        String[] critval = new String[mStringList.size()];
+        critval = mStringList.toArray(critval);
+        if( crit.equals("") ) {
+            crit = null;
+            critval = null;
+        }
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TBL_KML, TBL_KML_COL, crit, critval, null, null, null);
+        DB_KML anitem = null;
+        ////int id, String nama, int idkebun, int idrow, int idtoc, int idpeta, String folder
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                anitem = new DB_KML();
+                anitem.setID(Integer.parseInt(cursor.getString(0)));
+                anitem.setNama(cursor.getString(1));
+                anitem.setIDKebun(Integer.parseInt(cursor.getString(2)));
+                anitem.setIDRow(Integer.parseInt(cursor.getString(3)));
+                anitem.setIDTOC(Integer.parseInt(cursor.getString(4)));
+                anitem.setIDPeta(Integer.parseInt(cursor.getString(5)));
+                anitem.setFolder(cursor.getString(6));
+                anitem.setTampil(Integer.parseInt(cursor.getString(7)));
+                anitem.setSudah(Integer.parseInt(cursor.getString(8)));
+                aset.add(anitem);
+            } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -1521,6 +1612,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setSudah(Integer.parseInt(cursor.getString(8)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1668,6 +1763,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
     //07. tbl_obyek - ends
@@ -1720,6 +1819,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setUrut(Integer.parseInt(cursor.getString(0)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1778,6 +1881,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -1825,6 +1932,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(12)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -1948,6 +2059,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2037,6 +2152,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2117,6 +2236,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -2199,6 +2322,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2279,6 +2406,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -2361,6 +2492,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2441,6 +2576,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -2523,6 +2662,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2603,6 +2746,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -2685,6 +2832,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2765,6 +2916,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -2847,6 +3002,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -2927,6 +3086,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -3009,6 +3172,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -3089,6 +3256,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -3183,6 +3354,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setUrut(Integer.parseInt(cursor.getString(0)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -3322,6 +3497,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -3367,6 +3546,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(13)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -3579,7 +3762,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                     0, 0, 0, 0, 0, 0,
                     0, 0, 0, 1);
         }
-        cursor.close();
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return asetting;
     }
 
@@ -3591,6 +3777,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
             do {
                 banyak = banyak + 1;
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return banyak;
     }
@@ -3655,6 +3845,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setUrut(Integer.parseInt(cursor.getString(0)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -3792,6 +3986,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -3846,6 +4044,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setAsli(Integer.parseInt(cursor.getString(22)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -3957,6 +4159,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -3977,6 +4183,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setKirim(Integer.parseInt(cursor.getString(5)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -4011,6 +4221,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 banyak = banyak + 1;
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return banyak;
     }
 
@@ -4030,7 +4244,15 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
             anuser.setTingkat(Integer.parseInt(cursor.getString(8)));
             anuser.setJabatan(cursor.getString(9));
         } else {
+            if(cursor != null) {
+                cursor.close();
+                cursor = null;
+            }
             return null;
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return anuser;
     }
@@ -4119,6 +4341,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -4199,6 +4425,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setNama(cursor.getString(1));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -4306,6 +4536,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setJabatan(Integer.parseInt(cursor.getString(6)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
@@ -4467,6 +4701,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -4531,6 +4769,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 aset.add(anitem);
             } while (cursor.moveToNext());
         }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
+        }
         return aset;
     }
 
@@ -4587,6 +4829,10 @@ public class MySQLLiteHelper extends SQLiteOpenHelper {
                 anitem.setKirim(Integer.parseInt(cursor.getString(17)));
                 aset.add(anitem);
             } while (cursor.moveToNext());
+        }
+        if(cursor != null) {
+            cursor.close();
+            cursor = null;
         }
         return aset;
     }
